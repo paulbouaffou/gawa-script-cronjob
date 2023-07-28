@@ -1,0 +1,38 @@
+# Désactiver l'affichage des erreurs PHP dans le navigateur (optionnel)
+php_flag display_errors off
+
+# Désactiver l'accès direct aux scripts PHP
+<Files "gawabot.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "female_improve_bot.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "male_improve_bot.php">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Autoriser l'accès aux scripts PHP uniquement depuis certaines adresses IP
+# Remplacez 123.0.0.1 par l'adresse IP autorisée, vous pouvez ajouter plusieurs adresses IP séparées par des espaces
+<Files "gawabot.php">
+    Order Deny,Allow
+    Deny from all
+    Allow from 123.0.0.1
+</Files>
+
+<Files "female_improve_bot.php">
+    Order Deny,Allow
+    Deny from all
+    Allow from 123.0.0.1
+</Files>
+
+<Files "male_improve_bot.php">
+    Order Deny,Allow
+    Deny from all
+    Allow from 123.0.0.1
+</Files>
